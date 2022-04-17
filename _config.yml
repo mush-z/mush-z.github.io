@@ -103,5 +103,5 @@ theme: fluid
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repository: https://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@github.com/mush-z/mush-z.github.io.git
+  repository: https://github.com/mush-z/mush-z.github.io.git
   branch: master
