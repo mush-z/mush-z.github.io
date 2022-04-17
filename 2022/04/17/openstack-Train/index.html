@@ -16,21 +16,21 @@
   <meta name="author" content="mush">
   <meta name="keywords" content="">
   
-    <meta name="description" content="OpenStack T版搭建密码表：(密码均为密码名称)   密码名称 描述    数据库密码(不能使用变量) 数据库的root密码   ADMIN_PASS admin 用户密码   CEILOMETER_DBPASS Telemetry 服务的数据库密码   CEILOMETER_PASS Telemetry 服务的 ceilometer 用户密码   CINDER_DBPASS 块设备存储服">
+    <meta name="description" content="OpenStack T版搭建密码表：(密码均为密码名称)   密码名称 描述    数据库密码(不能使用变量) 数据库的root密码   ADMIN_PASS admin 用户密码   CEILOMETER_DBPASS Telemetry 服务的数据库密码   CEILOMETER_PASS Telemetry 服务的 ceilometer 用户密码   CINDER_DBPASS 块设备存储">
 <meta property="og:type" content="article">
-<meta property="og:title" content="openstack-Train.md">
+<meta property="og:title" content="openstack-Train">
 <meta property="og:url" content="http://example.com/2022/04/17/openstack-Train/index.html">
 <meta property="og:site_name" content="mush">
-<meta property="og:description" content="OpenStack T版搭建密码表：(密码均为密码名称)   密码名称 描述    数据库密码(不能使用变量) 数据库的root密码   ADMIN_PASS admin 用户密码   CEILOMETER_DBPASS Telemetry 服务的数据库密码   CEILOMETER_PASS Telemetry 服务的 ceilometer 用户密码   CINDER_DBPASS 块设备存储服">
+<meta property="og:description" content="OpenStack T版搭建密码表：(密码均为密码名称)   密码名称 描述    数据库密码(不能使用变量) 数据库的root密码   ADMIN_PASS admin 用户密码   CEILOMETER_DBPASS Telemetry 服务的数据库密码   CEILOMETER_PASS Telemetry 服务的 ceilometer 用户密码   CINDER_DBPASS 块设备存储">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2022-04-17T06:47:45.000Z">
-<meta property="article:modified_time" content="2022-04-17T06:54:17.289Z">
+<meta property="article:published_time" content="2022-04-17T08:51:14.000Z">
+<meta property="article:modified_time" content="2022-04-17T08:51:50.014Z">
 <meta property="article:author" content="mush">
 <meta property="article:tag" content="openstack-T">
 <meta name="twitter:card" content="summary_large_image">
   
   
-  <title>openstack-Train.md - mush</title>
+  <title>openstack-Train - mush</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
 
@@ -188,7 +188,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="openstack-Train.md">
+            <span class="h2" id="subtitle" title="openstack-Train">
               
             </span>
 
@@ -198,7 +198,7 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2022-04-17 14:47" pubdate>
+      <time datetime="2022-04-17 16:51" pubdate>
         April 17, 2022 pm
       </time>
     </span>
@@ -247,10 +247,11 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">openstack-Train.md</h1>
+            <h1 style="display: none">openstack-Train</h1>
             
             <div class="markdown-body">
-              <h1 id="OpenStack-T版搭建"><a href="#OpenStack-T版搭建" class="headerlink" title="OpenStack T版搭建"></a>OpenStack T版搭建</h1><h2 id="密码表：-密码均为密码名称"><a href="#密码表：-密码均为密码名称" class="headerlink" title="密码表：(密码均为密码名称)"></a>密码表：(密码均为密码名称)</h2><table>
+              <hr>
+<h1 id="OpenStack-T版搭建"><a href="#OpenStack-T版搭建" class="headerlink" title="OpenStack T版搭建"></a>OpenStack T版搭建</h1><h2 id="密码表：-密码均为密码名称"><a href="#密码表：-密码均为密码名称" class="headerlink" title="密码表：(密码均为密码名称)"></a>密码表：(密码均为密码名称)</h2><table>
 <thead>
 <tr>
 <th align="center">密码名称</th>
@@ -451,9 +452,12 @@
 
 <h3 id="安装rabbitmq并创建用户-controller"><a href="#安装rabbitmq并创建用户-controller" class="headerlink" title="安装rabbitmq并创建用户(controller)"></a>安装rabbitmq并创建用户(controller)</h3><p>1、功能:协调操作和状态信息服务</p>
 <p>2、常用的消息代理软件</p>
-<p>​			RabbitMQ</p>
-<p>​			Qpid</p>
-<p>​			ZeroMQ</p>
+<div class="code-wrapper"><pre><code class="hljs">        RabbitMQ
+
+        Qpid
+
+        ZeroMQ
+</code></pre></div>
 <p>3.在controller节点安装RabbitMQ</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs shell">a.安装RabbitMQ软件包<br>	yum -y install rabbitmq-server<br>b.启动服务并设置开机自启动<br>	systemctl enable rabbitmq-server<br>	systemctl start rabbitmq-server<br>查看运行状态<br>	systemctl status rabbitmq-server<br>c.创建用户<br>	rabbitmqctl add_user openstack RABBIT_PASS<br>	rabbitmqctl set_permissions openstack &quot;.*&quot; &quot;.*&quot; &quot;.*&quot;<br></code></pre></td></tr></table></figure>
 
@@ -737,7 +741,6 @@
 
 <h3 id="5-启动一个实例"><a href="#5-启动一个实例" class="headerlink" title="5.启动一个实例"></a>5.启动一个实例</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs shell">查看网络id:  neutron net-list<br><span class="hljs-meta prompt_">#</span><span class="language-bash"><span class="hljs-comment">##网络id=PROVIDER_NET_ID</span></span><br>创建实例:<br>openstack server create --flavor m1.nano --image cirros \<br>  --nic net-id=PROVIDER_NET_ID --security-group default \<br>  --key-name mykey provider-instance<br>  <br><span class="hljs-meta prompt_">  </span><br><span class="hljs-meta prompt_">#</span><span class="language-bash"><span class="hljs-comment">##查看已创建实例###</span></span><br>[root@controller ~]# openstack server list<br>+--------------------------------------+-------------------+--------+--------------------+<br>| ID                                   | Name              | Status | Networks           |<br>+--------------------------------------+-------------------+--------+--------------------+<br>| f6fa8d1a-13e7-46c9-b5e3-78cfdc3497d5 | provider-instance | ACTIVE | zzz=172.16.100.102 |<br>+--------------------------------------+-------------------+--------+--------------------+<br></code></pre></td></tr></table></figure>
 
-
             </div>
             <hr>
             <div>
@@ -771,18 +774,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/04/17/Linux%E6%89%A9%E5%AE%B9%E6%A0%B9%E7%A3%81%E7%9B%98%E7%A9%BA%E9%97%B4/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Linux扩容根磁盘空间</span>
-                        <span class="visible-mobile">Previous</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/04/17/openstack-Mitaka/">
-                        <span class="hidden-mobile">openstack-Mitaka</span>
+                      <a href="/2022/04/17/Linux%E6%89%A9%E5%AE%B9%E6%A0%B9%E7%A3%81%E7%9B%98%E7%A9%BA%E9%97%B4/">
+                        <span class="hidden-mobile">Linux扩容根磁盘空间</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
