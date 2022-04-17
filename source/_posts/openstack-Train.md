@@ -1,8 +1,10 @@
 ---
-title: openstack-Train.md
-date: 2022-04-17 14:47:45
+title: openstack-Train
+date: 2022-04-17 16:51:14
 tags: openstack-T
 category: Linux
+---
+
 ---
 
 # OpenStack T版搭建
@@ -438,11 +440,11 @@ Thanks for using MariaDB!
 
 2、常用的消息代理软件
 
-​			RabbitMQ
-
-​			Qpid
-
-​			ZeroMQ
+			RabbitMQ
+	
+			Qpid
+	
+			ZeroMQ
 
 3.在controller节点安装RabbitMQ
 
@@ -1768,4 +1770,3 @@ openstack server create --flavor m1.nano --image cirros \
 | f6fa8d1a-13e7-46c9-b5e3-78cfdc3497d5 | provider-instance | ACTIVE | zzz=172.16.100.102 |
 +--------------------------------------+-------------------+--------+--------------------+
 ```
-
