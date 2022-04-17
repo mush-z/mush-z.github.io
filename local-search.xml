@@ -4,13 +4,25 @@
   
   
   <entry>
-    <title></title>
+    <title>github-error</title>
     <link href="/2022/04/17/github-error/"/>
     <url>/2022/04/17/github-error/</url>
     
-    <content type="html"><![CDATA[<h2 id="一-error"><a href="#一-error" class="headerlink" title="一.error"></a>一.error</h2><figure class="highlight avrasm"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><pre><code class="hljs avrasm"><span class="hljs-symbol">fatal:</span> 不是 git 仓库（或者任何父目录）：.git<br></code></pre></td></tr></table></figure><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs shell">vim _config.yml<br><br>highlight:<br>  enable: flash<br></code></pre></td></tr></table></figure><h2 id="二-error"><a href="#二-error" class="headerlink" title="二.error"></a>二.error</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">ERROR Deployer not found: git<br></code></pre></td></tr></table></figure><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">npm install hexo-deployer-git --save<br></code></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<h2 id="1-error"><a href="#1-error" class="headerlink" title="1.error"></a>1.error</h2><figure class="highlight avrasm"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><pre><code class="hljs avrasm"><span class="hljs-symbol">fatal:</span> 不是 git 仓库（或者任何父目录）：.git<br></code></pre></td></tr></table></figure><p>解决:</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs shell">vim _config.yml<br><br>highlight:<br>  enable: flash<br></code></pre></td></tr></table></figure><h2 id="2-error"><a href="#2-error" class="headerlink" title="2.error"></a>2.error</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">ERROR Deployer not found: git<br></code></pre></td></tr></table></figure><p>解决:</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">npm install hexo-deployer-git --save<br></code></pre></td></tr></table></figure>]]></content>
     
     
+    <categories>
+      
+      <category>Linux</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>github+hexo error</tag>
+      
+    </tags>
     
   </entry>
   
@@ -26,14 +38,14 @@
     
     <categories>
       
-      <category>go</category>
+      <category>GO</category>
       
     </categories>
     
     
     <tags>
       
-      <tag>go</tag>
+      <tag>Go learn</tag>
       
     </tags>
     

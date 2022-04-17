@@ -16,20 +16,21 @@
   <meta name="author" content="mush">
   <meta name="keywords" content="">
   
-    <meta name="description" content="一.error1fatal: 不是 git 仓库（或者任何父目录）：.git  1234vim _config.ymlhighlight:  enable: flash    二.error1ERROR Deployer not found: git    1npm install hexo-deployer-git --save">
+    <meta name="description" content="1.error1fatal: 不是 git 仓库（或者任何父目录）：.git  解决: 1234vim _config.ymlhighlight:  enable: flash    2.error1ERROR Deployer not found: git  解决: 1npm install hexo-deployer-git --save">
 <meta property="og:type" content="article">
-<meta property="og:title" content="mush">
+<meta property="og:title" content="github-error">
 <meta property="og:url" content="http://example.com/2022/04/17/github-error/index.html">
 <meta property="og:site_name" content="mush">
-<meta property="og:description" content="一.error1fatal: 不是 git 仓库（或者任何父目录）：.git  1234vim _config.ymlhighlight:  enable: flash    二.error1ERROR Deployer not found: git    1npm install hexo-deployer-git --save">
+<meta property="og:description" content="1.error1fatal: 不是 git 仓库（或者任何父目录）：.git  解决: 1234vim _config.ymlhighlight:  enable: flash    2.error1ERROR Deployer not found: git  解决: 1npm install hexo-deployer-git --save">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2022-04-17T05:50:33.304Z">
-<meta property="article:modified_time" content="2022-04-17T05:50:33.304Z">
+<meta property="article:published_time" content="2022-04-17T06:01:51.000Z">
+<meta property="article:modified_time" content="2022-04-17T06:03:09.864Z">
 <meta property="article:author" content="mush">
+<meta property="article:tag" content="github+hexo error">
 <meta name="twitter:card" content="summary_large_image">
   
   
-  <title>mush</title>
+  <title>github-error - mush</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
 
@@ -187,7 +188,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="">
+            <span class="h2" id="subtitle" title="github-error">
               
             </span>
 
@@ -197,7 +198,7 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2022-04-17 13:50" pubdate>
+      <time datetime="2022-04-17 14:01" pubdate>
         April 17, 2022 pm
       </time>
     </span>
@@ -208,7 +209,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      142 字
+      148 字
     </span>
   
 
@@ -246,27 +247,40 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none"></h1>
+            <h1 style="display: none">github-error</h1>
             
             <div class="markdown-body">
-              <h2 id="一-error"><a href="#一-error" class="headerlink" title="一.error"></a>一.error</h2><figure class="highlight avrasm"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><pre><code class="hljs avrasm"><span class="hljs-symbol">fatal:</span> 不是 git 仓库（或者任何父目录）：.git<br></code></pre></td></tr></table></figure>
+              <h2 id="1-error"><a href="#1-error" class="headerlink" title="1.error"></a>1.error</h2><figure class="highlight avrasm"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><pre><code class="hljs avrasm"><span class="hljs-symbol">fatal:</span> 不是 git 仓库（或者任何父目录）：.git<br></code></pre></td></tr></table></figure>
 
+<p>解决:</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs shell">vim _config.yml<br><br>highlight:<br>  enable: flash<br></code></pre></td></tr></table></figure>
 
 
 
-<h2 id="二-error"><a href="#二-error" class="headerlink" title="二.error"></a>二.error</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">ERROR Deployer not found: git<br></code></pre></td></tr></table></figure>
+<h2 id="2-error"><a href="#2-error" class="headerlink" title="2.error"></a>2.error</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">ERROR Deployer not found: git<br></code></pre></td></tr></table></figure>
 
-
-
+<p>解决:</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">npm install hexo-deployer-git --save<br></code></pre></td></tr></table></figure>
-
 
             </div>
             <hr>
             <div>
               <div class="post-metas mb-3">
                 
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/Linux/">Linux</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/github-hexo-error/">github+hexo error</a>
+                    
+                  </div>
                 
               </div>
               
