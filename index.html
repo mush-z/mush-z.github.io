@@ -203,6 +203,194 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
+        <a href="/2022/04/17/Linux%E6%89%A9%E5%AE%B9%E6%A0%B9%E7%A3%81%E7%9B%98%E7%A9%BA%E9%97%B4/" target="_self">
+          Linux扩容根磁盘空间
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2022/04/17/Linux%E6%89%A9%E5%AE%B9%E6%A0%B9%E7%A3%81%E7%9B%98%E7%A9%BA%E9%97%B4/" target="_self">
+          
+          1.添加磁盘空间 2.查看磁盘信息 1fdisk -l  3.新建磁盘分区 4.创建新分区(vdb1)。 1fdisk &#x2F;dev&#x2F;vdb  5.创建物理卷。 1pvcreate &#x2F;dev&#x2F;vdb1  6.将添加新的物理卷，加载到centos卷组。 1vgextend centos &#x2F;dev&#x2F;vdb1  7.增加&#x2F;dev&#x2F;mapper&#x2F;centos-root大小，增加1
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2022-04-17 14:55" pubdate>
+              2022-04-17
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Linux/">Linux</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/linux-%E6%A0%B9%E6%89%A9%E5%AE%B9/">linux-根扩容</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2022/04/17/openstack-Train-md/" target="_self">
+          openstack-Train.md
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2022/04/17/openstack-Train-md/" target="_self">
+          
+          OpenStack T版搭建密码表：(密码均为密码名称)   密码名称 描述    数据库密码(不能使用变量) 数据库的root密码   ADMIN_PASS admin 用户密码   CEILOMETER_DBPASS Telemetry 服务的数据库密码   CEILOMETER_PASS Telemetry 服务的 ceilometer 用户密码   CINDER_DBPASS 块设备存储服
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2022-04-17 14:47" pubdate>
+              2022-04-17
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Linux/">Linux</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/openstack-T/">openstack-T</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2022/04/17/openstack-Mitaka/" target="_self">
+          openstack-Mitaka
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2022/04/17/openstack-Mitaka/" target="_self">
+          
+          OpenStack M版搭建 密码表：(密码均为密码名称)   密码名称 描述    数据库密码(不能使用变量) 数据库的root密码   ADMIN_PASS admin 用户密码   CEILOMETER_DBPASS Telemetry 服务的数据库密码   CEILOMETER_PASS Telemetry 服务的 ceilometer 用户密码   CINDER_DBPASS 块设备存储
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2022-04-17 14:47" pubdate>
+              2022-04-17
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Linux/">Linux</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/openstack-m/">openstack-m</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2022/04/17/docker/" target="_self">
+          docker
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2022/04/17/docker/" target="_self">
+          
+          DockerDocker 是一个开源的应用容器引擎，让开发者可以打包他们的应用以及依赖包到一个可移植的镜像中，然后发布到任何流行的Linux或Windows操作系统的机器上，也可以实现虚拟化。容器是完全使用沙箱机制，相互之间不会有任何接口。 docker安装1yum -y install yum-utils device-mapper-persistent-data lvm2  1yum -y i
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2022-04-17 14:06" pubdate>
+              2022-04-17
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/Linux/">Linux</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Docker-learn/">Docker learn</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
         <a href="/2022/04/17/github-error/" target="_self">
           github-error
         </a>
