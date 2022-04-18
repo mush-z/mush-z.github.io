@@ -42,7 +42,7 @@
     
     
       
-      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10/styles/mac.min.css" />
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10/styles/github-gist.min.css" />
     
   
 
@@ -63,6 +63,10 @@
 <link  rel="stylesheet" href="/css/main.css" />
 
 <!-- 自定义样式保持在最底部 -->
+
+  
+<link rel="stylesheet" href="/css/mac.css">
+
 
 
   <script id="fluid-configs">
@@ -260,26 +264,26 @@
             <div class="markdown-body">
               <p>1.添加磁盘空间</p>
 <p>2.查看磁盘信息</p>
-<figure class="highlight ebnf"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">fdisk -l</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight ebnf"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs ebnf"><span class="hljs-attribute">fdisk -l</span><br></code></pre></div></td></tr></table></figure>
 
 <p>3.新建磁盘分区</p>
 <p>4.创建新分区(vdb1)。</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">fdisk <span class="hljs-regexp">/dev/</span>vdb<br></code></pre></td></tr></table></figure>
+<figure class="highlight awk"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs awk">fdisk <span class="hljs-regexp">/dev/</span>vdb<br></code></pre></div></td></tr></table></figure>
 
 <p>5.创建物理卷。</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">pvcreate <span class="hljs-regexp">/dev/</span>vdb1<br></code></pre></td></tr></table></figure>
+<figure class="highlight awk"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs awk">pvcreate <span class="hljs-regexp">/dev/</span>vdb1<br></code></pre></div></td></tr></table></figure>
 
 <p>6.将添加新的物理卷，加载到centos卷组。</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">vgextend centos <span class="hljs-regexp">/dev/</span>vdb1<br></code></pre></td></tr></table></figure>
+<figure class="highlight awk"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs awk">vgextend centos <span class="hljs-regexp">/dev/</span>vdb1<br></code></pre></div></td></tr></table></figure>
 
 <p>7.增加&#x2F;dev&#x2F;mapper&#x2F;centos-root大小，增加100G。</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">lvresize -L +<span class="hljs-number">100</span>G <span class="hljs-regexp">/dev/m</span>apper/centos-root<br></code></pre></td></tr></table></figure>
+<figure class="highlight awk"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs awk">lvresize -L +<span class="hljs-number">100</span>G <span class="hljs-regexp">/dev/m</span>apper/centos-root<br></code></pre></div></td></tr></table></figure>
 
 <p>8.同步文件系统。</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">xfs_growfs <span class="hljs-regexp">/dev/m</span>apper/centos-root<br></code></pre></td></tr></table></figure>
+<figure class="highlight awk"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs awk">xfs_growfs <span class="hljs-regexp">/dev/m</span>apper/centos-root<br></code></pre></div></td></tr></table></figure>
 
 <p>9.查看扩容后的大小。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">df</span> -h<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash"><span class="hljs-built_in">df</span> -h<br></code></pre></div></td></tr></table></figure>
 
             </div>
             <hr>
