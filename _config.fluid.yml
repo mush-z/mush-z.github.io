@@ -57,12 +57,11 @@ code:
       # 在链接中挑选 style 填入
       # Select a style in the link
       # See: https://highlightjs.org/static/demo/
-      style: "Mac"
-      #"Github Gist"
+      style: "Github Gist"
 
       # 是否根据 style 改变代码背景色（如果 style 是深色背景别忘了开启此项）
       # If true, the code background will change color based on the style (If style has a dark background, don't forget to true)
-      bg_color: false
+      bg_color: true
 
     prismjs:
       # 在下方链接页面右侧的圆形按钮挑选 style 填入，也可以直接填入 css 链接
@@ -72,7 +71,7 @@ code:
 
       # 设为 true 高亮将本地静态生成（并只支持部分 prismjs 插件），设为 false 高亮将在浏览器通过 js 生成
       # If true, it will be generated locally (but some prismjs plugins are not supported). If false, it will be generated via JS in the browser
-      preprocess: true
+      preprocess: ture
 
 # 一些好玩的功能
 # Some fun features
@@ -205,7 +204,7 @@ custom_js:
 
 # 指定自定义 .css 文件路径，用法和 custom_js 相同
 # The usage is the same as custom_js
-custom_css:
+custom_css: /css/mac.css
 
 # 自定义 <head> 节点中的 HTML 内容
 # Customize <head> HTML content
