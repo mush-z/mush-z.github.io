@@ -16,21 +16,21 @@
   <meta name="author" content="mush">
   <meta name="keywords" content="">
   
-    <meta name="description" content="1.添加磁盘空间 2.查看磁盘信息 1fdisk -l  3.新建磁盘分区 4.创建新分区(vdb1)。 1fdisk &#x2F;dev&#x2F;vdb  5.创建物理卷。 1pvcreate &#x2F;dev&#x2F;vdb1  6.将添加新的物理卷，加载到centos卷组。 1vgextend centos &#x2F;dev&#x2F;vdb1  7.增加&#x2F;dev&#x2F;mapper&#x2F;centos-root大小，增加1">
+    <meta name="description" content="Ｂ（二进制）O（八进制）Ｄ（十进制）Ｈ（十六进制）二进制转十进制12341  1  0  0 1 0 064 32 16 8 4 2 164 + 32 + 4 &#x3D; 100  (十进制)  二进制转八进制1234560 0 1    1 0 0    1 0 0   (从右到左，三个一组，不够前面添0)4 2 1    4 2 1    4 2 1  1        4        4">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Linux扩容根磁盘空间">
-<meta property="og:url" content="http://example.com/2022/04/17/Linux%E6%89%A9%E5%AE%B9%E6%A0%B9%E7%A3%81%E7%9B%98%E7%A9%BA%E9%97%B4/index.html">
+<meta property="og:title" content="进制转换">
+<meta property="og:url" content="http://example.com/2022/04/20/%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2/index.html">
 <meta property="og:site_name" content="mush">
-<meta property="og:description" content="1.添加磁盘空间 2.查看磁盘信息 1fdisk -l  3.新建磁盘分区 4.创建新分区(vdb1)。 1fdisk &#x2F;dev&#x2F;vdb  5.创建物理卷。 1pvcreate &#x2F;dev&#x2F;vdb1  6.将添加新的物理卷，加载到centos卷组。 1vgextend centos &#x2F;dev&#x2F;vdb1  7.增加&#x2F;dev&#x2F;mapper&#x2F;centos-root大小，增加1">
+<meta property="og:description" content="Ｂ（二进制）O（八进制）Ｄ（十进制）Ｈ（十六进制）二进制转十进制12341  1  0  0 1 0 064 32 16 8 4 2 164 + 32 + 4 &#x3D; 100  (十进制)  二进制转八进制1234560 0 1    1 0 0    1 0 0   (从右到左，三个一组，不够前面添0)4 2 1    4 2 1    4 2 1  1        4        4">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2022-04-17T06:55:26.000Z">
-<meta property="article:modified_time" content="2022-04-20T11:29:10.163Z">
+<meta property="article:published_time" content="2022-04-20T11:27:06.000Z">
+<meta property="article:modified_time" content="2022-04-20T11:28:42.727Z">
 <meta property="article:author" content="mush">
-<meta property="article:tag" content="linux-根扩容">
+<meta property="article:tag" content="learn">
 <meta name="twitter:card" content="summary_large_image">
   
   
-  <title>Linux扩容根磁盘空间 - mush</title>
+  <title>进制转换 - mush</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
 
@@ -192,7 +192,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="Linux扩容根磁盘空间">
+            <span class="h2" id="subtitle" title="进制转换">
               
             </span>
 
@@ -202,8 +202,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2022-04-17 14:55" pubdate>
-        April 17, 2022 pm
+      <time datetime="2022-04-20 19:27" pubdate>
+        April 20, 2022 pm
       </time>
     </span>
   
@@ -213,7 +213,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      283 字
+      579 字
     </span>
   
 
@@ -222,7 +222,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      3 分钟
+      5 分钟
     </span>
   
 
@@ -259,31 +259,29 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Linux扩容根磁盘空间</h1>
+            <h1 style="display: none">进制转换</h1>
             
             <div class="markdown-body">
-              <p>1.添加磁盘空间</p>
-<p>2.查看磁盘信息</p>
-<figure class="highlight shell"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs shell">fdisk -l<br></code></pre></div></td></tr></table></figure>
+              <h2 id="B（二进制）O（八进制）D（十进制）H（十六进制）"><a href="#B（二进制）O（八进制）D（十进制）H（十六进制）" class="headerlink" title="Ｂ（二进制）O（八进制）Ｄ（十进制）Ｈ（十六进制）"></a>Ｂ（二进制）O（八进制）Ｄ（十进制）Ｈ（十六进制）</h2><h3 id="二进制转十进制"><a href="#二进制转十进制" class="headerlink" title="二进制转十进制"></a>二进制转十进制</h3><figure class="highlight text"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs text">1  1  0  0 1 0 0<br>64 32 16 8 4 2 1<br><br>64 + 32 + 4 = 100  (十进制)<br></code></pre></div></td></tr></table></figure>
 
-<p>3.新建磁盘分区</p>
-<p>4.创建新分区(vdb1)。</p>
-<figure class="highlight shell"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs shell">fdisk /dev/vdb<br></code></pre></div></td></tr></table></figure>
+<h3 id="二进制转八进制"><a href="#二进制转八进制" class="headerlink" title="二进制转八进制"></a>二进制转八进制</h3><figure class="highlight text"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs text">0 0 1    1 0 0    1 0 0   (从右到左，三个一组，不够前面添0)<br>4 2 1    4 2 1    4 2 1<br><br>  1        4        4<br>  <br>		 144 (八进制)<br></code></pre></div></td></tr></table></figure>
 
-<p>5.创建物理卷。</p>
-<figure class="highlight shell"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs shell">pvcreate /dev/vdb1<br></code></pre></div></td></tr></table></figure>
+<h3 id="二进制转十六进制"><a href="#二进制转十六进制" class="headerlink" title="二进制转十六进制"></a>二进制转十六进制</h3><figure class="highlight text"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs text">0 1 1 0   0 1 0 0     (从右到左，四个一组，不够前面添0)<br>8 4 2 1   8 4 2 1<br>   6         4<br>        64(十六进制)<br></code></pre></div></td></tr></table></figure>
 
-<p>6.将添加新的物理卷，加载到centos卷组。</p>
-<figure class="highlight shell"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs shell">vgextend centos /dev/vdb1<br></code></pre></div></td></tr></table></figure>
+<h3 id="八进制转十进制"><a href="#八进制转十进制" class="headerlink" title="八进制转十进制"></a>八进制转十进制</h3><figure class="highlight text"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs text">八进制：302 = 3×8² + 0×8¹ + 2×8⁰ = 192 + 0 + 2 = 194(十进制)<br></code></pre></div></td></tr></table></figure>
 
-<p>7.增加&#x2F;dev&#x2F;mapper&#x2F;centos-root大小，增加100G。</p>
-<figure class="highlight shell"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs shell">lvresize -L +100G /dev/mapper/centos-root<br></code></pre></div></td></tr></table></figure>
+<h3 id="八进制转十六进制"><a href="#八进制转十六进制" class="headerlink" title="八进制转十六进制"></a>八进制转十六进制</h3><figure class="highlight text"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs text">  1       4      4<br>4 2 1   4 2 1  4 2 1<br>0 0 1   1 0 0  1 0 0<br>     001100100 (二进制)<br>0 1 1 0    0 1 0 0<br>8 4 2 1    8 4 2 1<br>   6          4<br>       64 (十六进制)<br></code></pre></div></td></tr></table></figure>
 
-<p>8.同步文件系统。</p>
-<figure class="highlight shell"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs shell">xfs_growfs /dev/mapper/centos-root<br></code></pre></div></td></tr></table></figure>
+<h3 id="十六进制转十进制"><a href="#十六进制转十进制" class="headerlink" title="十六进制转十进制"></a>十六进制转十进制</h3><figure class="highlight text"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs text">十六进制：ABC = A×16² + B×16¹ + C×16⁰ = 2560 + 176 + 12 = 2748(十进制)<br></code></pre></div></td></tr></table></figure>
 
-<p>9.查看扩容后的大小。</p>
-<figure class="highlight shell"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs shell">df -h<br></code></pre></div></td></tr></table></figure>
+<h3 id="十六进制转八进制"><a href="#十六进制转八进制" class="headerlink" title="十六进制转八进制"></a>十六进制转八进制</h3><figure class="highlight text"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs text">   6           4<br>8 4 2 1     8 4 2 1<br>0 1 1 0     0 1 0 0<br>    01100100 (二进制)<br>0 0 1   1 0 0  1 0 0<br>4 2 1   4 2 1  4 2 1<br>  1       4      4<br>         144 (八进制)<br></code></pre></div></td></tr></table></figure>
+
+<h3 id="与运算-∧"><a href="#与运算-∧" class="headerlink" title="与运算(∧)"></a>与运算(∧)</h3><figure class="highlight text"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs text">0 &amp; 0 = 0<br>0 &amp; 1 = 0<br>1 &amp; 0 = 0<br>1 &amp; 1 = 1<br><br>同为1得 1，其余为 0<br></code></pre></div></td></tr></table></figure>
+
+<h3 id="或运算-∨"><a href="#或运算-∨" class="headerlink" title="或运算(∨)"></a>或运算(∨)</h3><figure class="highlight text"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs text">0 | 0 = 0<br>0 | 1 = 1<br>1 | 0 = 1<br>1 | 1 = 1<br><br>有1为1<br></code></pre></div></td></tr></table></figure>
+
+<h3 id="异或运算"><a href="#异或运算" class="headerlink" title="异或运算"></a>异或运算</h3><figure class="highlight text"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs text">1 0 1 1 0 0 0 1<br>0 1 1 0 1 0 1 0<br><br>1 1 0 1 1 0 1 1<br><br>相同为 0，不同为 1 <br></code></pre></div></td></tr></table></figure>
+
 
             </div>
             <hr>
@@ -293,7 +291,7 @@
                   <div class="post-meta mr-3">
                     <i class="iconfont icon-category"></i>
                     
-                      <a class="hover-with-bg" href="/categories/Linux/">Linux</a>
+                      <a class="hover-with-bg" href="/categories/learn/">learn</a>
                     
                   </div>
                 
@@ -301,7 +299,7 @@
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/linux-%E6%A0%B9%E6%89%A9%E5%AE%B9/">linux-根扩容</a>
+                      <a class="hover-with-bg" href="/tags/learn/">learn</a>
                     
                   </div>
                 
@@ -318,18 +316,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/04/17/openstack-Train/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">openstack-Train</span>
-                        <span class="visible-mobile">Previous</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/04/17/openstack-Mitaka/">
-                        <span class="hidden-mobile">openstack-Mitaka</span>
+                      <a href="/2022/04/17/openstack-Train/">
+                        <span class="hidden-mobile">openstack-Train</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
